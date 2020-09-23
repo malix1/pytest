@@ -25,7 +25,6 @@ def aws_credentials():
 
 @pytest.fixture(scope="module")
 def dynamoDb(aws_credentials):
-    print("connection dynamo db")
     with mock_dynamodb2():
         database = Db()
         database.client.create_table(TableName="table1",
