@@ -1,5 +1,5 @@
 import pytest
-from StudentDB import StudentDB
+from Databases.StudentDB import StudentDB
 
 
 """
@@ -37,10 +37,11 @@ def db2(request):
     return db
  """
 
-## if your fixtures in conftest.py file you dont need to import pytest
-## auto detects and use it 
+# if your fixtures in conftest.py file you dont need to import pytest
+# auto detects and use it
 #  if you make scope module, it runs for every file
-## if you make scope session, it runs just one time
+# if you make scope session, it runs just one time
+
 
 def test_ali_data(db):
     student_data = db.get_data("ali")

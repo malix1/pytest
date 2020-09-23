@@ -1,4 +1,4 @@
-import func
+from test import func
 import pytest
 import sys
 
@@ -22,8 +22,8 @@ import sys
     ("hello", "world", "helloworld"),
     (10.5, 10.5, 21)
 ])
-def test_add_parms(arg1,arg2,result):
-    assert func.add(arg1,arg2) == result
+def test_add_parms(arg1, arg2, result):
+    assert func.add(arg1, arg2) == result
 
 
 @pytest.mark.skipif(sys.version_info > (3, 9), reason="version is bigger than python 3.9")
